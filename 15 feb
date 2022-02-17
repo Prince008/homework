@@ -184,7 +184,7 @@ public class MyClass {
         {
             for (int j = 0; j < N; j++)
             {
-                if (mat[i][j] == 0)            // cell `(i, j)` has value 0
+                if (mat[i][j] == 0)           
                 {
                    
                     changeRowColumn(mat, M, N, i, j);
