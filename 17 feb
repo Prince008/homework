@@ -1,0 +1,91 @@
+ 1. // Java Program to find if the given matrix is lower triangular or not
+
+import java.util.*;
+public class Main {
+	static int N = 3;
+	public static int check_lower_triangular(int mat[][])
+		{
+			int i, j;
+			for (i = 0; i < N; i++)
+				for (j = i + 1; j < N; j++)
+					if (mat[i][j] != 0)
+						return 0;
+			return 1;
+		}
+	public static void main(String[] args)
+		{
+			int n, flag = 0;
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter the order of the matrix :");
+			n = sc.nextInt();
+			int[][] mat1 = new int[n][n];
+			System.out.println("Input the matrix elements : ");
+			int i, j;
+			for(i = 0; i < n; i++)
+				{
+					for(j = 0;j < n; j++)
+						mat1[i][j] = sc.nextInt();
+				}
+			int res = check_lower_triangular(mat1);
+			if (res == 1)
+				System.out.println("Lower Triangular Matrix");
+			else
+				System.out.println("Not an Lower Triangular Matrix");
+		}
+}
+
+
+2.Find the sum of diagonal elements of a matrix
+
+
+import java.util.*;
+ 
+ public class arr16
+{  
+ public static void main(String args[])
+ {
+ Scanner sc = new Scanner(System.in);
+ 
+         int i,j,row,col,sum=0;
+ System.out.println("Enter the number of rows:");
+ row = sc.nextInt();
+ System.out.println("Enter the number of columns:");
+ col = sc.nextInt();
+ 
+ int[][] mat = new int[row][col];
+ 
+     System.out.println("Enter the elements of the matrix") ;
+     for(i=0;i<row;i++)
+     { 
+      for(j=0;j<col;j++)
+      { 
+          mat[i][j] = sc.nextInt();
+     }
+ }
+ 
+     System.out.println("The elements of the matrix") ;
+     for(i=0;i<row;i++)
+     { 
+      for(j=0;j<col;j++)
+      { 
+        System.out.print(mat[i][j]+"\t");
+     }
+       System.out.println("");
+ }
+ 
+     for(i=0;i<row;i++)
+     { 
+      for(j=0;j<col;j++)
+      { 
+ if(i==j) //this condition checks for diagonal
+ {
+ sum = sum + mat[i][j];
+ }
+     }
+ }
+ 
+     System.out.printf("SUM of DIAGONAL elements of the matrix = "+sum) ;
+ } 
+}
+
+3.
