@@ -77,7 +77,7 @@ import java.util.*;
      { 
       for(j=0;j<col;j++)
       { 
- if(i==j) //this condition checks for diagonal
+ if(i==j) 
  {
  sum = sum + mat[i][j];
  }
@@ -88,4 +88,47 @@ import java.util.*;
  } 
 }
 
-3.
+3.Check whether the matrix is sparse."
+
+import java.util.*;
+public class SparseMatrix    {    
+    public static void main(String[] args) {    
+        int rows, cols, size, count = 0; 
+        Scanner sc = new Scanner(System.in);
+			System.out.println("Enter the order of the matrix :");
+		   int 	n = sc.nextInt();
+			int[][] a = new int[n][n];
+			System.out.println("Input the matrix elements : ");
+			int i, j;
+			for(i = 0; i < n; i++)
+				{
+					for(j = 0;j < n; j++)
+						a[i][j] = sc.nextInt();
+				}
+            
+          
+        
+              
+           
+          rows = a.length;    
+        cols = a[0].length;    
+            
+       
+        size = rows * cols;    
+            
+            
+        for( i = 0; i < rows; i++){    
+            for(j = 0; j < cols; j++){    
+                if(a[i][j] == 0)    
+                    count++;    
+                }    
+            }    
+                
+        if(count > (size/2))    
+            System.out.println("Given matrix is a sparse matrix");    
+        else    
+            System.out.println("Given matrix is not a sparse matrix");    
+    }    
+}  
+
+
